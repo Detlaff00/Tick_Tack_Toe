@@ -1,0 +1,303 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.svg-icon {
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#game-info {
+    margin-bottom: 20px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#timer-container {
+    background-color: #373745;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+#game-board-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.cell svg {
+    width: 90%;
+    height: 90%;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #45a049;
+    border-radius: 8px;
+}
+
+#pause-button {
+    background-color: #f44336;
+    border-radius: 8px;
+}
+
+#pause-button:hover {
+    background-color: #d32f2f;
+    border-radius: 8px;
+}
+
+#turn-info {
+    background-color: #373745;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+#current-turn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#current-turn.x svg {
+    stroke: #2196F3;
+}
+
+#current-turn.o svg {
+    stroke: #FFC107;
+}
+
+#current-turn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content img.modal-image {
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cell.winning.x-win {
+    background-color: rgba(33, 150, 243, 0.2);
+}
+
+.cell.winning.o-win {
+    background-color: rgba(255, 193, 7, 0.2);
+}
+
+
+/* Стили остаются те же, добавляем только новые */
+.modal-content input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.modal-content button {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Стили остаются те же, добавляем только новые */
+.modal-content input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.modal-content button {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+/* Стили остаются те же, добавляем только новые */
+.modal-content input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.modal-content button {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+#scoreboard-container {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    /* Отрегулируйте этот параметр, чтобы контейнер был на уровне игрового поля */
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#scoreboard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#scoreboard th,
+#scoreboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#scoreboard th {
+    background-color: #373745;
+    color: white;
+}

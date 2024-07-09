@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="svg-container">
+                <svg viewBox="0 0 100 100" class="svg-icon o-icon">
+                    <circle cx="50" cy="50" r="40" stroke="#FFC107" stroke-width="10" fill="none" />
+                </svg>
+            </span>
+            Крестики-нолики
+            <span class="svg-container">
+                <svg viewBox="0 0 100 100" class="svg-icon x-icon">
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="#2196F3" stroke-width="10" stroke-linecap="round" />
+                    <line x1="10" y1="90" x2="90" y2="10" stroke="#2196F3" stroke-width="10" stroke-linecap="round" />
+                </svg>
+            </span>
+        </h1>
+    </header>
+    <main>
+        <div id="scoreboard-container">
+            
+            <table id="scoreboard">
+                <thead>
+                    <tr>
+                        <th>Игрок</th>
+                        <th>Побед</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="player-x-name"></td>
+                        <td id="player-x-wins">0</td>
+                    </tr>
+                    <tr>
+                        <td id="player-o-name"></td>
+                        <td id="player-o-wins">0</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div id="game-info">
+            <div id="controls">
+                <button id="start-button">Начать игру</button>
+                <button id="pause-button" style="display: none;">Пауза</button>
+            </div>
+            <div id="timer-container">
+                <div id="timer">00:00</div>
+            </div>
+        </div>
+        <div id="game-board-container">
+            <div id="game-board"></div>
+        </div>
+        <div id="turn-info">
+            <span>Ходит: <span id="current-player-name"></span></span>
+            <span id="current-turn"></span>
+        </div>
+        
+    </main>
+    <div id="pause-modal" class="modal">
+        <div class="modal-content">
+            <img src="pause.png" alt="Игра на паузе" class="modal-image">
+            <p>Игра на паузе</p>
+            <button id="resume-button">Продолжить игру</button>
+        </div>
+    </div>
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <img src="win.png" alt="Победа" class="modal-image">
+            <p id="win-message"></p>
+            <button id="restart-button">Начать заново</button>
+            <button id="menu-button-win">Выход в меню</button>
+        </div>
+    </div>
+    <div id="draw-modal" class="modal">
+        <div class="modal-content">
+            <img src="pat.png" alt="Ничья" class="modal-image">
+            <p>Ничья!</p>
+            <button id="restart-button-draw">Начать заново</button>
+            <button id="menu-button-draw">Выход в меню</button>
+        </div>
+    </div>
+    <div id="player-names-modal" class="modal">
+        <div class="modal-content">
+            <svg id="player-icon" viewBox="0 0 100 100" class="svg-icon x-icon">
+                <line x1="10" y1="10" x2="90" y2="90" stroke="#2196F3" stroke-width="10" stroke-linecap="round" />
+                <line x1="10" y1="90" x2="90" y2="10" stroke="#2196F3" stroke-width="10" stroke-linecap="round" />
+            </svg>
+            <p>Введите имя игрока <span id="player-turn">X</span>:</p>
+            <input type="text" id="player-name-input" placeholder="Имя игрока">
+            <button id="submit-name-button">Принять</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
