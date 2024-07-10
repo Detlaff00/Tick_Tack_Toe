@@ -205,7 +205,7 @@ button:hover {
 }
 
 
-/* Стили остаются те же, добавляем только новые */
+
 .modal-content input[type="text"] {
     width: 80%;
     padding: 10px;
@@ -228,37 +228,6 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Стили остаются те же, добавляем только новые */
-.modal-content input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    font-size: 1em;
-}
-
-.modal-content button {
-    font-family: 'Roboto', sans-serif;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.modal-content button:hover {
-    background-color: #45a049;
-}
-/* Стили остаются те же, добавляем только новые */
-.modal-content input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    font-size: 1em;
-}
 
 .modal-content button {
     font-family: 'Roboto', sans-serif;
@@ -274,12 +243,12 @@ button:hover {
 .modal-content button:hover {
     background-color: #45a049;
 }
+
 
 #scoreboard-container {
     position: absolute;
     left: 100px;
     top: 100px;
-    /* Отрегулируйте этот параметр, чтобы контейнер был на уровне игрового поля */
     background-color: #f8f8f8;
     padding: 10px;
     border-radius: 8px;

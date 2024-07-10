@@ -231,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             drawModal.style.display = 'block';
         }
-        // Переключаем стартующего игрока после завершения игры
         startingPlayer = startingPlayer === 'X' ? 'O' : 'X';
     }
 
@@ -262,7 +261,7 @@ let playerOWins = 0;
 function handlePlayerNameSubmit() {
     if (isPlayerXTurn) {
         playerXName = playerNameInput.value.trim() || 'Игрок X';
-        document.getElementById('player-x-name').textContent = playerXName; // Обновление имени в таблице
+        document.getElementById('player-x-name').textContent = playerXName; 
         isPlayerXTurn = false;
         playerTurnSpan.textContent = 'O';
         playerNameInput.value = '';
@@ -271,7 +270,7 @@ function handlePlayerNameSubmit() {
         `;
     } else {
         playerOName = playerNameInput.value.trim() || 'Игрок O';
-        document.getElementById('player-o-name').textContent = playerOName; // Обновление имени в таблице
+        document.getElementById('player-o-name').textContent = playerOName;
         playerNamesModal.style.display = 'none';
         startGame();
     }
