@@ -228,23 +228,6 @@ button:hover {
     background-color: #45a049;
 }
 
-
-.modal-content button {
-    font-family: 'Roboto', sans-serif;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.modal-content button:hover {
-    background-color: #45a049;
-}
-
-
 #scoreboard-container {
     position: absolute;
     left: 100px;
